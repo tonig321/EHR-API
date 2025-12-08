@@ -1,0 +1,2980 @@
+{
+  "type": "searchset",
+  "timestamp": "2025-11-29T22:24:49.000-05:00",
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient?ah-practice:Organization=a-1.Practice-195900&name=smith"
+    },
+    {
+      "relation": "next",
+      "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient?ah-practice:Organization=a-1.Practice-195900&name=smith&cursor=a-195900.E-10061"
+    }
+  ],
+  "entry": [
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10002",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:38:56.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10002",
+        "telecom": [
+          {
+            "value": "dominik-210@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith210",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith210",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10002"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10002"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10015",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:39:43.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10015",
+        "telecom": [
+          {
+            "value": "dominik-migrate-4@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith4",
+            "given": [
+              "Dominic",
+              "Justin"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith4",
+            "given": [
+              "Dominic",
+              "Justin"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4218 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1995-05-18",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10015"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10015"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10016",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:39:43.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10016",
+        "telecom": [
+          {
+            "value": "dominik-migrate-5@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith5",
+            "given": [
+              "Dominic",
+              "Justin"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith5",
+            "given": [
+              "Dominic",
+              "Justin"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4218 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1995-05-18",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10016"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10016"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10018",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2025-03-07T08:05:11.000-05:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10018",
+        "telecom": [
+          {
+            "value": "dh5@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith",
+            "given": [
+              "Dh"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith",
+            "given": [
+              "Dh"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "use": "home",
+            "country": "USA",
+            "period": {
+              "start": "2022-08-23"
+            },
+            "state": "NY",
+            "line": [
+              "788 COLUMBUS AVENUE 10-O"
+            ],
+            "city": "NEW YORK",
+            "postalCode": "10025"
+          },
+          {
+            "use": "billing",
+            "country": "USA",
+            "period": {
+              "start": "2022-09-22"
+            },
+            "state": "NY",
+            "type": "postal",
+            "line": [
+              "788 COLUMBUS AVENUE 10-O"
+            ],
+            "city": "NEW YORK",
+            "postalCode": "10025"
+          }
+        ],
+        "birthDate": "1982-12-20",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10018"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10018"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10019",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2023-05-18T09:01:24.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10019",
+        "telecom": [
+          {
+            "value": "mint5@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith",
+            "given": [
+              "Mint"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith",
+            "given": [
+              "Mint"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "use": "home",
+            "country": "USA",
+            "period": {
+              "start": "2022-09-15"
+            },
+            "state": "NY",
+            "line": [
+              "788 COLUMBUS AVENUE 10-O"
+            ],
+            "city": "NEW YORK",
+            "postalCode": "10025"
+          },
+          {
+            "use": "billing",
+            "country": "USA",
+            "period": {
+              "start": "2022-09-22"
+            },
+            "state": "NY",
+            "type": "postal",
+            "line": [
+              "788 COLUMBUS AVENUE 10-O"
+            ],
+            "city": "NEW YORK",
+            "postalCode": "10025"
+          }
+        ],
+        "birthDate": "1982-12-17",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-21"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-41"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-22"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10019"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10019"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10021",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:39:58.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10021",
+        "telecom": [
+          {
+            "value": "dominik-migrate-3@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith3",
+            "given": [
+              "Dominic",
+              "Justin"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith3",
+            "given": [
+              "Dominic",
+              "Justin"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4218 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1995-05-18",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10021"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10021"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10023",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:40:16.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10023",
+        "telecom": [
+          {
+            "value": "jacek.janus+72@pragmaticcoders.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith",
+            "given": [
+              "Jason"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith",
+            "given": [
+              "Jason"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4216 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1976-03-18",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10023"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10023"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10029",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:42:04.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10029",
+        "telecom": [
+          {
+            "value": "dominik-102@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith102",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith102",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10029"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10029"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10031",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:42:04.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10031",
+        "telecom": [
+          {
+            "value": "dominik-103@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith103",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith103",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10031"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10031"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10035",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:42:21.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10035",
+        "telecom": [
+          {
+            "value": "dominik-105@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith105",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith105",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10035"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10035"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10036",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:42:21.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10036",
+        "telecom": [
+          {
+            "value": "dominik-104@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith104",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith104",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10036"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10036"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10037",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "female",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2023-05-18T06:15:27.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10037",
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith",
+            "given": [
+              "Romilda"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith",
+            "given": [
+              "Romilda"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "use": "home",
+            "country": "USA",
+            "period": {
+              "start": "2022-08-16"
+            },
+            "state": "TX",
+            "line": [
+              "4216 LILLIAN ST"
+            ],
+            "city": "HOUSTON",
+            "postalCode": "77007"
+          },
+          {
+            "use": "billing",
+            "country": "USA",
+            "period": {
+              "start": "2022-11-10"
+            },
+            "state": "TX",
+            "type": "postal",
+            "line": [
+              "4216 LILLIAN ST"
+            ],
+            "city": "HOUSTON",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1976-02-28",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248152002",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10037"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10037"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10040",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:42:35.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10040",
+        "telecom": [
+          {
+            "value": "dominik-206@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith206",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith206",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10040"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10040"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10043",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-11-04T08:33:01.000-05:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10043",
+        "telecom": [
+          {
+            "value": "dominik-2071@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith207",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith207",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10043"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10043"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10045",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:42:51.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10045",
+        "telecom": [
+          {
+            "value": "dominik-209@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith209",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith209",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10045"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10045"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10049",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:42:52.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10049",
+        "telecom": [
+          {
+            "value": "dominik-209@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith209",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith209",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10049"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10049"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10050",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:42:52.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10050",
+        "telecom": [
+          {
+            "value": "dominik-207@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith207",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith207",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10050"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10050"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10055",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:43:09.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10055",
+        "telecom": [
+          {
+            "value": "dominik-208@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith208",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith208",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10055"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10055"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10057",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:43:09.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10057",
+        "telecom": [
+          {
+            "value": "dominik-208@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith208",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith208",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10057"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10057"
+    },
+    {
+      "resource": {
+        "identifier": [
+          {
+            "value": "a-195900.E-10060",
+            "system": "https://fhir.athena.io/sid/ah-patient"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "security": [
+            {
+              "display": "normal",
+              "code": "N",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+            }
+          ],
+          "lastUpdated": "2020-08-26T08:43:11.000-04:00"
+        },
+        "_active": {
+          "extension": [
+            {
+              "url": "https://fhir.athena.io/StructureDefinition/ah-patient-active",
+              "valueCoding": {
+                "code": "a",
+                "system": "https://fhir.athena.io/CodeSystem/ah-patient-status"
+              }
+            }
+          ]
+        },
+        "maritalStatus": {
+          "coding": [
+            {
+              "display": "Never Married",
+              "code": "S",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+            }
+          ]
+        },
+        "id": "a-195900.E-10060",
+        "telecom": [
+          {
+            "value": "dominik-108@mailinator.com",
+            "system": "email"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith106",
+            "given": [
+              "Dominic"
+            ]
+          },
+          {
+            "use": "usual",
+            "period": {
+              "start": "2020-08-26"
+            },
+            "family": "Smith106",
+            "given": [
+              "Dominic"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "English",
+              "coding": [
+                {
+                  "display": "English",
+                  "code": "en",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            }
+          }
+        ],
+        "resourceType": "Patient",
+        "address": [
+          {
+            "period": {
+              "start": "2020-08-26"
+            },
+            "state": "TX",
+            "use": "home",
+            "line": [
+              "4220 Lillian St"
+            ],
+            "city": "Houston",
+            "postalCode": "77007"
+          }
+        ],
+        "birthDate": "1989-02-02",
+        "extension": [
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-brand",
+            "valueReference": {
+              "reference": "Organization/a-195900.Brand-1"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-42"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-chart-sharing-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.CSG-81"
+            }
+          },
+          {
+            "url": "https://fhir.athena.io/StructureDefinition/ah-provider-group",
+            "valueReference": {
+              "reference": "Organization/a-195900.PG-1"
+            }
+          },
+          {
+            "valueCode": "UNK",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          },
+          {
+            "valueCode": "248153007",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+          }
+        ],
+        "active": true
+      },
+      "search": {
+        "mode": "match"
+      },
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10060"
+        }
+      ],
+      "fullUrl": "https://api.preview.platform.athenahealth.com/fhir/r4/Patient/a-195900.E-10060"
+    }
+  ],
+  "resourceType": "Bundle"
+}
