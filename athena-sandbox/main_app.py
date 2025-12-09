@@ -13,8 +13,10 @@ from botocore.session import get_session
 # ------------------------------------------------------------------
 # 1. YOUR VALUES — change these two lines only
 # ------------------------------------------------------------------
+TOKEN_URL = "https://9ulb7khdf3.execute-api.us-east-1.amazonaws.com/athena-token-server.default" # Recreated 12/7/25
+
 #TOKEN_URL = "https://{api-id}.execute-api.{region}.amazonaws.com/{stage}/{resource-path}" # Per Aamzon Q
-TOKEN_URL = "https://9ulb7khdf3.execute-api.us-east-1.amazonaws.com/default/athena-token-server"
+#TOKEN_URL = "https://9ulb7khdf3.execute-api.us-east-1.amazonaws.com/default/athena-token-server"
  #per Amazon Q
 #TOKEN_URL = "https://9ulb7khdf3.execute-api.us-east-1.amazonaws.com/default"
 #TOKEN_URL = "https://9ulb7khdf3.execute-api.us-east-1.amazonaws.com/default"
