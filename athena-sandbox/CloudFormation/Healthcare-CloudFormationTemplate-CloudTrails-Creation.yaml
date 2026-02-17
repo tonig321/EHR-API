@@ -1,0 +1,285 @@
+# cloudtrail-setup.yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Healthcare-compliant CloudTrail setup with S3, encryption, and monitoring'
+
+Parameters:
+  OrganizationName:
+    Type: String
+    Default: 'healthcare-org'
+    Description: 'Organization name for resource naming (lowercase, no spaces)'
+    AllowedPattern: '^[a-z0-9-]+$'
+    ConstraintDescription: 'Must contain only lowercase letters, numbers, and hyphens'
+  
+  NotificationEmail:
+    Type: String
+    Description: 'Email address for security notifications'
+    AllowedPattern: '^[^\s@]+@[^\s@]+\.[^\s@]+$'
+    ConstraintDescription: 'Must be a valid email address'
+  
+  LogRetentionYears:
+    Type: Number
+    Default: 7
+    MinValue: 1
+    MaxValue: 10
+    Description: 'Number of years to retain CloudTrail logs'
+
+Resources:
+  # KMS Key for CloudTrail encryption
+  CloudTrailKMSKey:
+    Type: AWS::KMS::Key
+    Properties:
+      Description: !Sub 'KMS Key for ${OrganizationName} CloudTrail log encryption'
+      EnableKeyRotation: true
+      KeyPolicy:
+        Statement:
+          - Sid: Enable IAM User Permissions
+            Effect: Allow
+            Principal:
+              AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
+            Action: 'kms:*'
+            Resource: '*'
+          - Sid: Allow CloudTrail to encrypt logs
+            Effect: Allow
+            Principal:
+              Service: cloudtrail.amazonaws.com
+            Action:
+              - kms:GenerateDataKey*
+              - kms:DescribeKey
+              - kms:Encrypt
+              - kms:ReEncrypt*
+              - kms:Decrypt
+            Resource: '*'
+            Condition:
+              StringEquals:
+                'kms:EncryptionContext:aws:cloudtrail:arn': !Sub 'arn:aws:cloudtrail:*:${AWS::AccountId}:trail/*'
+          - Sid: Allow CloudWatch Logs
+            Effect: Allow
+            Principal:
+              Service: !Sub 'logs.${AWS::Region}.amazonaws.com'
+            Action:
+              - kms:Encrypt
+              - kms:Decrypt
+              - kms:ReEncrypt*
+              - kms:GenerateDataKey*
+              - kms:DescribeKey
+            Resource: '*'
+
+  CloudTrailKMSKeyAlias:
+    Type: AWS::KMS::Alias
+    Properties:
+      AliasName: !Sub 'alias/${OrganizationName}-cloudtrail'
+      TargetKeyId: !Ref CloudTrailKMSKey
+
+  # S3 Bucket for CloudTrail logs
+  CloudTrailLogsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub '${OrganizationName}-cloudtrail-${AWS::AccountId}-${AWS::Region}'
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: aws:kms
+              KMSMasterKeyID: !Ref CloudTrailKMSKey
+            BucketKeyEnabled: true
+      VersioningConfiguration:
+        Status: Enabled
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      LifecycleConfiguration:
+        Rules:
+          - Id: CloudTrailLogsLifecycle
+            Status: Enabled
+            Filter:
+              Prefix: 'cloudtrail-logs/'
+            Transitions:
+              - TransitionInDays: 30
+                StorageClass: STANDARD_IA
+              - TransitionInDays: 90
+                StorageClass: GLACIER
+              - TransitionInDays: 365
+                StorageClass: DEEP_ARCHIVE
+            ExpirationInDays: !Ref LogRetentionDays
+      NotificationConfiguration:
+        TopicConfigurations:
+          - Topic: !Ref SecurityAlertsTopic
+            Event: s3:ObjectCreated:*
+
+  # Calculate retention days from years
+  LogRetentionDays:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: !Sub '/${OrganizationName}/cloudtrail/retention-days'
+      Type: String
+      Value: !Sub 
+        - '${Days}'
+        - Days: !Ref LogRetentionYears
+      Description: 'CloudTrail log retention in days'
+
+  # S3 Bucket Policy for CloudTrail
+  CloudTrailBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref CloudTrailLogsBucket
+      PolicyDocument:
+        Statement:
+          - Sid: AWSCloudTrailAclCheck
+            Effect: Allow
+            Principal:
+              Service: cloudtrail.amazonaws.com
+            Action: s3:GetBucketAcl
+            Resource: !Sub '${CloudTrailLogsBucket}'
+            Condition:
+              StringEquals:
+                'AWS:SourceArn': !Sub 'arn:aws:cloudtrail:*:${AWS::AccountId}:trail/${OrganizationName}-management-trail'
+          
+          - Sid: AWSCloudTrailWrite
+            Effect: Allow
+            Principal:
+              Service: cloudtrail.amazonaws.com
+            Action: s3:PutObject
+            Resource: !Sub '${CloudTrailLogsBucket}/cloudtrail-logs/*'
+            Condition:
+              StringEquals:
+                's3:x-amz-acl': 'bucket-owner-full-control'
+                'AWS:SourceArn': !Sub 'arn:aws:cloudtrail:*:${AWS::AccountId}:trail/${OrganizationName}-management-trail'
+          
+          - Sid: DenyInsecureConnections
+            Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource:
+              - !Sub '${CloudTrailLogsBucket}'
+              - !Sub '${CloudTrailLogsBucket}/*'
+            Condition:
+              Bool:
+                'aws:SecureTransport': 'false'
+
+  # SNS Topic for security alerts
+  SecurityAlertsTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub '${OrganizationName}-security-alerts'
+      DisplayName: !Sub '${OrganizationName} Security Alerts'
+      KmsMasterKeyId: !Ref CloudTrailKMSKey
+
+  SecurityAlertsSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Protocol: email
+      TopicArn: !Ref SecurityAlertsTopic
+      Endpoint: !Ref NotificationEmail
+
+  # CloudWatch Log Group for CloudTrail
+  CloudTrailLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/cloudtrail/${OrganizationName}'
+      RetentionInDays: 90
+      KmsKeyId: !GetAtt CloudTrailKMSKey.Arn
+
+  # IAM Role for CloudTrail to write to CloudWatch Logs
+  CloudTrailLogsRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub '${OrganizationName}-CloudTrailLogsRole'
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: cloudtrail.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: CloudTrailLogsPolicy
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                  - logs:DescribeLogStreams
+                  - logs:DescribeLogGroups
+                Resource: !Sub '${CloudTrailLogGroup}*'
+
+  # CloudTrail Trail
+  ManagementTrail:
+    Type: AWS::CloudTrail::Trail
+    DependsOn: CloudTrailBucketPolicy
+    Properties:
+      TrailName: !Sub '${OrganizationName}-management-trail'
+      S3BucketName: !Ref CloudTrailLogsBucket
+      S3KeyPrefix: 'cloudtrail-logs/'
+      IncludeGlobalServiceEvents: true
+      IsMultiRegionTrail: true
+      EnableLogFileValidation: true
+      KMSKeyId: !Ref CloudTrailKMSKey
+      CloudWatchLogsLogGroupArn: !Sub '${CloudTrailLogGroup}:*'
+      CloudWatchLogsRoleArn: !GetAtt CloudTrailLogsRole.Arn
+      SNSTopicName: !GetAtt SecurityAlertsTopic.TopicName
+      EventSelectors:
+        - ReadWriteType: All
+          IncludeManagementEvents: true
+          DataResources: []
+
+  # CloudWatch Metric Filter for Root User Activity
+  RootUserMetricFilter:
+    Type: AWS::Logs::MetricFilter
+    Properties:
+      LogGroupName: !Ref CloudTrailLogGroup
+      FilterPattern: '{ $.userIdentity.type = "Root" && $.userIdentity.invokedBy NOT EXISTS && $.eventType != "AwsServiceEvent" }'
+      MetricTransformations:
+        - MetricNamespace: !Sub '${OrganizationName}/Security'
+          MetricName: 'RootUserActivity'
+          MetricValue: '1'
+          DefaultValue: 0
+
+  # CloudWatch Alarm for Root User Activity
+  RootUserAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub '${OrganizationName}-root-user-activity'
+      AlarmDescription: 'Alarm when root user activity is detected'
+      MetricName: 'RootUserActivity'
+      Namespace: !Sub '${OrganizationName}/Security'
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      AlarmActions:
+        - !Ref SecurityAlertsTopic
+      TreatMissingData: notBreaching
+
+Outputs:
+  CloudTrailArn:
+    Description: 'CloudTrail ARN'
+    Value: !GetAtt ManagementTrail.Arn
+    Export:
+      Name: !Sub '${AWS::StackName}-CloudTrailArn'
+  
+  S3BucketName:
+    Description: 'S3 Bucket for CloudTrail logs'
+    Value: !Ref CloudTrailLogsBucket
+    Export:
+      Name: !Sub '${AWS::StackName}-S3Bucket'
+  
+  KMSKeyId:
+    Description: 'KMS Key ID for encryption'
+    Value: !Ref CloudTrailKMSKey
+    Export:
+      Name: !Sub '${AWS::StackName}-KMSKey'
+  
+  KMSKeyAlias:
+    Description: 'KMS Key Alias'
+    Value: !Ref CloudTrailKMSKeyAlias
+    Export:
+      Name: !Sub '${AWS::StackName}-KMSKeyAlias'
+  
+  SNSTopicArn:
+    Description: 'SNS Topic for security alerts'
+    Value: !Ref SecurityAlertsTopic
+    Export:
+      Name: !Sub '${AWS::StackName}-SNSTopic'
