@@ -1,6 +1,5 @@
 #Second take after much time was spent determining Lambdba deployment package issues with requests library specifically,
 # and apparently all external dependencies are a no-go for this environment.
-#  
 # =============================================================================
 # AthenaHealth Token Server (Lambda) — 100% built-in libraries, no dependencies
 # Purpose: Securely fetch and cache an OAuth2 access token from AthenaHealth
@@ -27,8 +26,6 @@ def get_secret() -> tuple[str, str]:
     """
     Retrieves your AthenaHealth client_id and client_secret from Secrets Manager.
     Returns a tuple: (client_id, client_secret)
-    Looks in AWS Secrets Manager for a secret named athena-preview-creds and pulls the client_id and client_secret from it."
-
     """
     client = boto3.client('secretsmanager')                     # AWS service client
     response = client.get_secret_value(SecretId='athena-preview-creds')
@@ -96,4 +93,15 @@ def lambda_handler(event, context):
     global _cached_token, _cached_expiry
 
     # If we don't have a token or it's about to expire → fetch new one
-    if _cached_token is None or time.time() > _
+    if _cached_token is None or time.time() > _cached_expiry:
+        print("Fetching new token from AthenaHealth...")
+        _cached_token, _cached_expiry = get_fresh_token()
+    else:
+        print("Returning cached token")
+
+    # Return HTTP 200 with JSON body — this is what your main_app.py expects
+    return {
+        "statusCode": 200,
+        "headers": {"Content-Type": "application/json"},
+        "body": json.dumps({"access_token": _cached_token})
+    }
